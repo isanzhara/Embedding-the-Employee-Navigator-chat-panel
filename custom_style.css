@@ -1,6 +1,6 @@
 :root {
-  --dwp-navigator-trigger-display: none;
-  --dwp-navigator-trigger-background: url('https://img.icons8.com/fluent/1200/internet.jpg');
+  --dwp-navigator-trigger-display: inline-block ;
+  --dwp-navigator-trigger-background: #f86e00;
   --dwp-navigator-trigger-border: #f1f1f4;
   --dwp-navigator-trigger-border-radius: 50% 50% 50% 3px;
   --dwp-navigator-trigger-color: white;
