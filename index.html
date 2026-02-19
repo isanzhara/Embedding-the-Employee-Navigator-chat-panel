@@ -3,44 +3,228 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Corporate theme styles -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://isanzhara.github.io/Embedding-the-Employee-Navigator-chat-panel/custom_style.css" type="text/css" />
-    <title>Rotating Navigation</title>
+
+    <!-- Optional: your hosted custom styles -->
+    <link
+      rel="stylesheet"
+      href="https://isanzhara.github.io/Embedding-the-Employee-Navigator-chat-panel/custom_style.css"
+      type="text/css"
+    />
+
+    <title>Corporate Service Portal</title>
   </head>
+
   <body>
-    <div class="container">
-      <div class="circle-container">
+    <!-- Top enterprise header -->
+    <header class="topbar">
+      <div class="topbar__left">
+        <div class="brand">
+          <div class="brand__mark" aria-hidden="true">
+            <i class="fas fa-building"></i>
+          </div>
+          <div class="brand__text">
+            <div class="brand__name">Acme Corporation</div>
+            <div class="brand__sub">Service Portal</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="topbar__right">
+        <button class="icon-btn" type="button" aria-label="Notifications" title="Notifications">
+          <i class="far fa-bell"></i>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Help" title="Help">
+          <i class="far fa-question-circle"></i>
+        </button>
+        <div class="user">
+          <div class="user__avatar" aria-hidden="true">IA</div>
+          <div class="user__meta">
+            <div class="user__name">Iryna A.</div>
+            <div class="user__role">Employee</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container" id="app">
+      <!-- rotating circle control -->
+      <div class="circle-container" aria-hidden="false">
         <div class="circle">
-          <button id="close">
+          <button id="close" aria-label="Close menu" title="Close">
             <i class="fas fa-times"></i>
           </button>
-          <button id="open">
+          <button id="open" aria-label="Open menu" title="Menu">
             <i class="fas fa-bars"></i>
           </button>
         </div>
       </div>
 
-      <div class="content">
-        <h1>Amazing Article</h1>
-        <small>Florin Pop</small>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia in ratione dolores cupiditate, maxime aliquid impedit dolorem nam dolor omnis atque fuga labore modi veritatis porro laborum minus, illo, maiores recusandae cumque ipsa quos. Tenetur, consequuntur mollitia labore pariatur sunt quia harum aut. Eum maxime dolorem provident natus veritatis molestiae cumque quod voluptates ab non, tempore cupiditate? Voluptatem, molestias culpa. Corrupti, laudantium iure aliquam rerum sint nam quas dolor dignissimos in error placeat quae temporibus minus optio eum soluta cupiditate! Cupiditate saepe voluptates laudantium. Ducimus consequuntur perferendis consequatur nobis exercitationem molestias fugiat commodi omnis. Asperiores quia tenetur nemo ipsa.</p>
+      <main class="content">
+        <!-- hero -->
+        <section class="hero">
+          <div class="hero__left">
+            <h1>Service Portal</h1>
+            <p class="subtitle">Submit requests, access knowledge, and contact support.</p>
 
-        <h3>My Dog</h3>
-        <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80" alt="doggy" />
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit libero deleniti rerum quo, incidunt vel consequatur culpa ullam. Magnam facere earum unde harum. Ea culpa veritatis magnam at aliquid. Perferendis totam placeat molestias illo laudantium? Minus id minima doloribus dolorum fugit deserunt qui vero voluptas, ut quia cum amet temporibus veniam ad ea ab perspiciatis, enim accusamus asperiores explicabo provident. Voluptates sint, neque fuga cum illum, tempore autem maxime similique laborum odio, magnam esse. Aperiam?</p>
-        <button onclick="dwpNavigator.start({skillId: 'AGGC057NJW4LLASWKA8MSWKA8MXZ8X', productName: 'Chat panel title'}); dwpNavigator.show()">Button label</button>
-      </div>
+            <div class="hero-actions">
+              <a class="btn btn-secondary" href="#knowledge">
+                <i class="far fa-file-alt"></i>
+                Knowledge base
+              </a>
+
+              <!-- Chat launcher button -->
+              <button
+                class="btn btn-primary btn-chat"
+                type="button"
+                onclick="dwpNavigator.start({ skillId: 'AGGC057NJW4LLASWKA8MSWKA8MXZ8X', productName: 'Chat panel title' }); dwpNavigator.show();"
+              >
+                <i class="fas fa-comments"></i>
+                Contact support
+              </button>
+            </div>
+
+            <p class="hint">
+              Office hours: Mon–Fri, 09:00–17:00. For urgent incidents, create a P1 ticket.
+            </p>
+          </div>
+
+          <div class="hero__right">
+            <div class="kpi-grid">
+              <div class="kpi">
+                <div class="kpi__label">Open requests</div>
+                <div class="kpi__value">3</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__label">Avg. response</div>
+                <div class="kpi__value">1h 12m</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__label">System status</div>
+                <div class="kpi__value kpi__value--ok">
+                  <span class="dot dot--ok" aria-hidden="true"></span>
+                  Operational
+                </div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__label">Planned maintenance</div>
+                <div class="kpi__value">None</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- quick actions -->
+        <section class="grid">
+          <article class="card">
+            <h2>Request something</h2>
+            <p>Create a request for access, hardware, software, or services.</p>
+            <div class="card__actions">
+              <a class="btn btn-secondary" href="#">
+                <i class="fas fa-plus"></i>
+                New request
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2>Report an incident</h2>
+            <p>Something broken? Report an issue and track progress.</p>
+            <div class="card__actions">
+              <a class="btn btn-secondary" href="#">
+                <i class="fas fa-exclamation-triangle"></i>
+                Report incident
+              </a>
+            </div>
+          </article>
+
+          <article class="card" id="knowledge">
+            <h2>Knowledge base</h2>
+            <p>Search how-to articles, policies, and troubleshooting guides.</p>
+            <div class="card__actions">
+              <a class="btn btn-secondary" href="#">
+                <i class="fas fa-search"></i>
+                Search articles
+              </a>
+            </div>
+          </article>
+        </section>
+
+        <!-- content -->
+        <section class="card">
+          <h3>Announcements</h3>
+          <ul class="list">
+            <li>
+              <span class="badge">Info</span>
+              VPN client update available (recommended)
+            </li>
+            <li>
+              <span class="badge badge--warn">Notice</span>
+              MFA enrollment required for new devices
+            </li>
+          </ul>
+        </section>
+
+        <footer class="footer" id="contact">
+          <span>© 2026 Acme Corporation</span>
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Terms</a>
+        </footer>
+      </main>
     </div>
 
-    <nav>
+    <nav class="side-nav" aria-label="Primary">
       <ul>
-        <li><i class="fas fa-home"></i><a href="#"> Home</a></li>
-        <li><i class="fas fa-user-alt"></i><a href="#"> About</a></li>
-        <li><i class="fas fa-envelope"></i><a href="#"> Contact</a></li>
+        <li>
+          <i class="fas fa-home"></i>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <i class="fas fa-user-alt"></i>
+          <a href="#knowledge">Knowledge</a>
+        </li>
+        <li>
+          <i class="fas fa-envelope"></i>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
-    <script src="script.js"></script>
-    <script defer src="https://dwpmaster2-dwp.aus-itrnch-02.bmc.com/dwp/navigator/script/navigator-trigger.min.js" type="text/javascript" id="dwp-navigator__trigger-script"></script>
+
+    <script>
+      const openBtn = document.getElementById("open");
+      const closeBtn = document.getElementById("close");
+      const container = document.getElementById("app");
+
+      openBtn.addEventListener("click", () => container.classList.add("show-nav"));
+      closeBtn.addEventListener("click", () => container.classList.remove("show-nav"));
+
+      // Optional guard: if user clicks chat before navigator script loads
+      window.addEventListener("error", (e) => {
+        const msg = String(e?.message || "");
+        if (msg.includes("dwpNavigator")) {
+          console.warn(
+            "Navigator is not ready yet. The trigger script may still be loading. Try again in a moment."
+          );
+        }
+      });
+    </script>
+
+    <!-- DWP Navigator trigger -->
+    <script
+      defer
+      src="https://dwpmaster2-dwp.aus-itrnch-02.bmc.com/dwp/navigator/script/navigator-trigger.min.js"
+      type="text/javascript"
+      id="dwp-navigator__trigger-script"
+    ></script>
   </body>
 </html>
