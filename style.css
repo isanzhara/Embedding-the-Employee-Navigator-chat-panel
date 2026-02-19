@@ -353,13 +353,19 @@ body {
   left: 18px;
   bottom: 18px;
   z-index: 60;
-  transform: translateX(-180px);
-  transition: transform 0.5s ease;
+  transform: translateX(-220px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: transform 0.4s ease, opacity 0.25s ease;
 }
 
-.container.show-nav + .side-nav,
 .container.show-nav ~ .side-nav {
   transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .side-nav ul {
