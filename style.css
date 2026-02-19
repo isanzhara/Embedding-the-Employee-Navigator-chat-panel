@@ -1,15 +1,19 @@
+/* =====================================================
+   SOFT SUNSET DASHBOARD THEME
+   Muted Orange → Dusty Purple → Deep Plum
+===================================================== */
+
 :root {
-  --text: #ffffff;
-  --muted: rgba(255, 255, 255, 0.75);
+  --text: #f4f6ff;
+  --muted: rgba(255, 255, 255, 0.65);
 
-  --surface: rgba(255, 255, 255, 0.08);
-  --surface-strong: rgba(255, 255, 255, 0.14);
+  --surface: rgba(255, 255, 255, 0.07);
+  --surface-strong: rgba(255, 255, 255, 0.12);
 
-  --border: rgba(255, 255, 255, 0.18);
+  --border: rgba(255, 255, 255, 0.14);
 
-  --accent-orange: #ff6a00;
-  --accent-pink: #ff2d95;
-  --accent-purple: #7b2cff;
+  --accent-orange: #e87a2f;
+  --accent-purple: #6b4ccf;
 
   --shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
   --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.35);
@@ -36,16 +40,16 @@ body {
   color: var(--text);
   overflow-x: hidden;
 
-  /* Sunset cinematic gradient */
+  /* Softer cinematic gradient */
   background:
-    radial-gradient(circle at 50% 0%, rgba(255, 130, 0, 0.95) 0%, rgba(255, 90, 0, 0.85) 20%, transparent 60%),
+    radial-gradient(circle at 50% 0%, rgba(232,122,47,0.55) 0%, transparent 60%),
     linear-gradient(
       180deg,
-      #ff7a00 0%,
-      #ff3d6e 25%,
-      #7b2cff 55%,
-      #3a004d 80%,
-      #15001c 100%
+      #d96b2b 0%,
+      #a24fa8 35%,
+      #5a3b8c 60%,
+      #2a1f3d 85%,
+      #160c22 100%
     );
 }
 
@@ -122,7 +126,7 @@ body {
   padding: 30px;
   border-radius: var(--radius);
   background: var(--surface);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 
@@ -132,7 +136,7 @@ body {
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin: 0 0 10px;
 }
 
@@ -162,14 +166,9 @@ h1 {
   padding: 22px;
   border-radius: var(--radius);
   background: var(--surface);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
-}
-
-.card h2,
-.card h3 {
-  margin-top: 0;
 }
 
 .card p {
@@ -198,22 +197,17 @@ h1 {
 
 .btn:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.16);
 }
 
-/* Primary sunset gradient */
 .btn-primary {
   background: linear-gradient(
     135deg,
     var(--accent-orange),
-    var(--accent-pink)
+    var(--accent-purple)
   );
   border: none;
-  box-shadow: 0 10px 30px rgba(255, 80, 0, 0.4);
-}
-
-.btn-primary:hover {
-  filter: brightness(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
 
 /* =====================================================
@@ -232,7 +226,7 @@ h1 {
   height: 180px;
   border-radius: 50%;
   background: var(--surface);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   transition: transform 0.5s ease;
@@ -273,13 +267,9 @@ h1 {
 
   border-radius: var(--radius);
   background: var(--surface);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(18px);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
-}
-
-.side-nav li {
-  margin-bottom: 10px;
 }
 
 .side-nav a {
