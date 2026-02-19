@@ -12,7 +12,6 @@
       crossorigin="anonymous"
     />
 
-    <!-- Corporate theme styles -->
     <link rel="stylesheet" href="style.css" />
 
     <!-- Optional: your hosted custom styles -->
@@ -40,6 +39,13 @@
         </div>
       </div>
 
+      <div class="topbar__center">
+        <div class="search">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input type="search" placeholder="Search knowledge, requests, apps…" aria-label="Search" />
+        </div>
+      </div>
+
       <div class="topbar__right">
         <button class="icon-btn" type="button" aria-label="Notifications" title="Notifications">
           <i class="far fa-bell"></i>
@@ -56,6 +62,14 @@
         </div>
       </div>
     </header>
+
+    <!-- Futuristic background layers -->
+    <div class="bg" aria-hidden="true">
+      <div class="bg__glow bg__glow--a"></div>
+      <div class="bg__glow bg__glow--b"></div>
+      <div class="bg__grid"></div>
+      <div class="bg__noise"></div>
+    </div>
 
     <div class="container" id="app">
       <!-- rotating circle control -->
@@ -74,8 +88,13 @@
         <!-- hero -->
         <section class="hero">
           <div class="hero__left">
+            <div class="pill">
+              <span class="dot dot--ok" aria-hidden="true"></span>
+              Status: All systems operational
+            </div>
+
             <h1>Service Portal</h1>
-            <p class="subtitle">Submit requests, access knowledge, and contact support.</p>
+            <p class="subtitle">Submit requests, access knowledge, and contact support — all in one place.</p>
 
             <div class="hero-actions">
               <a class="btn btn-secondary" href="#knowledge">
@@ -83,7 +102,6 @@
                 Knowledge base
               </a>
 
-              <!-- Chat launcher button -->
               <button
                 class="btn btn-primary btn-chat"
                 type="button"
@@ -92,6 +110,26 @@
                 <i class="fas fa-comments"></i>
                 Contact support
               </button>
+
+              <a class="btn btn-ghost" href="#requests">
+                <i class="fas fa-layer-group"></i>
+                View my requests
+              </a>
+            </div>
+
+            <div class="meta-row">
+              <div class="meta">
+                <div class="meta__label">Next SLA</div>
+                <div class="meta__value">Today, 15:30</div>
+              </div>
+              <div class="meta">
+                <div class="meta__label">Primary region</div>
+                <div class="meta__value">EU-West</div>
+              </div>
+              <div class="meta">
+                <div class="meta__label">Support tier</div>
+                <div class="meta__value">Standard</div>
+              </div>
             </div>
 
             <p class="hint">
@@ -104,53 +142,66 @@
               <div class="kpi">
                 <div class="kpi__label">Open requests</div>
                 <div class="kpi__value">3</div>
+                <div class="kpi__sub">2 in progress · 1 awaiting info</div>
               </div>
               <div class="kpi">
                 <div class="kpi__label">Avg. response</div>
                 <div class="kpi__value">1h 12m</div>
+                <div class="kpi__sub">Last 7 days</div>
               </div>
               <div class="kpi">
-                <div class="kpi__label">System status</div>
-                <div class="kpi__value kpi__value--ok">
-                  <span class="dot dot--ok" aria-hidden="true"></span>
-                  Operational
+                <div class="kpi__label">Security</div>
+                <div class="kpi__value">
+                  <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                  MFA enabled
                 </div>
+                <div class="kpi__sub">Last check: today</div>
               </div>
               <div class="kpi">
                 <div class="kpi__label">Planned maintenance</div>
                 <div class="kpi__value">None</div>
+                <div class="kpi__sub">Next 14 days</div>
               </div>
             </div>
           </div>
         </section>
 
         <!-- quick actions -->
-        <section class="grid">
+        <section class="grid" aria-label="Quick actions">
           <article class="card">
-            <h2>Request something</h2>
+            <div class="card__header">
+              <i class="fas fa-plus-circle card__icon" aria-hidden="true"></i>
+              <h2>New request</h2>
+            </div>
             <p>Create a request for access, hardware, software, or services.</p>
             <div class="card__actions">
               <a class="btn btn-secondary" href="#">
                 <i class="fas fa-plus"></i>
-                New request
+                Create request
               </a>
             </div>
           </article>
 
           <article class="card">
-            <h2>Report an incident</h2>
+            <div class="card__header">
+              <i class="fas fa-exclamation-triangle card__icon" aria-hidden="true"></i>
+              <h2>Report incident</h2>
+            </div>
             <p>Something broken? Report an issue and track progress.</p>
             <div class="card__actions">
               <a class="btn btn-secondary" href="#">
-                <i class="fas fa-exclamation-triangle"></i>
-                Report incident
+                <i class="fas fa-bolt"></i>
+                Report now
               </a>
             </div>
           </article>
 
           <article class="card" id="knowledge">
-            <h2>Knowledge base</h2>
-            <p>Search how-to articles, policies, and troubleshooting guides.</p>
+            <div class="card__header">
+              <i class="fas fa-book card__icon" aria-hidden="true"></i>
+              <h2>Knowledge base</h2>
+            </div>
+            <p>Find policies, how-to guides, and troubleshooting articles.</p>
             <div class="card__actions">
               <a class="btn btn-secondary" href="#">
                 <i class="fas fa-search"></i>
@@ -160,17 +211,141 @@
           </article>
         </section>
 
-        <!-- content -->
+        <!-- Two-column section -->
+        <section class="split" id="requests">
+          <article class="card">
+            <h3>My requests</h3>
+            <div class="table">
+              <div class="row row--head">
+                <div>ID</div>
+                <div>Title</div>
+                <div>Status</div>
+                <div>Updated</div>
+              </div>
+
+              <div class="row">
+                <div class="mono">REQ-1048</div>
+                <div>Access to Finance folder</div>
+                <div><span class="status status--inprogress">In progress</span></div>
+                <div>2h ago</div>
+              </div>
+
+              <div class="row">
+                <div class="mono">REQ-1042</div>
+                <div>Laptop docking station</div>
+                <div><span class="status status--waiting">Waiting on you</span></div>
+                <div>Yesterday</div>
+              </div>
+
+              <div class="row">
+                <div class="mono">REQ-1039</div>
+                <div>VPN connectivity issue</div>
+                <div><span class="status status--open">Open</span></div>
+                <div>3 days ago</div>
+              </div>
+            </div>
+
+            <div class="card__actions">
+              <a class="btn btn-secondary" href="#">
+                <i class="fas fa-list"></i>
+                View all
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Recommended for you</h3>
+            <ul class="list">
+              <li>
+                <span class="badge">How-to</span>
+                Reset your password (SSO)
+                <span class="list__meta">· 2 min read</span>
+              </li>
+              <li>
+                <span class="badge">Policy</span>
+                Remote work security guidelines
+                <span class="list__meta">· Updated this week</span>
+              </li>
+              <li>
+                <span class="badge badge--warn">Notice</span>
+                MFA enrollment required for new devices
+                <span class="list__meta">· Action needed</span>
+              </li>
+            </ul>
+
+            <div class="callout">
+              <div class="callout__title">Tip</div>
+              <div class="callout__text">
+                Use <span class="mono">Contact support</span> for quick questions — it routes you to the right team.
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- App catalog -->
+        <section class="card">
+          <div class="section-head">
+            <h3>App catalog</h3>
+            <div class="section-head__right">
+              <button class="chip chip--active" type="button">All</button>
+              <button class="chip" type="button">IT</button>
+              <button class="chip" type="button">HR</button>
+              <button class="chip" type="button">Finance</button>
+            </div>
+          </div>
+
+          <div class="apps">
+            <a class="app" href="#">
+              <div class="app__icon"><i class="fas fa-lock"></i></div>
+              <div class="app__body">
+                <div class="app__title">Access Management</div>
+                <div class="app__sub">Request roles, groups, permissions</div>
+              </div>
+              <i class="fas fa-chevron-right app__chev" aria-hidden="true"></i>
+            </a>
+
+            <a class="app" href="#">
+              <div class="app__icon"><i class="fas fa-laptop"></i></div>
+              <div class="app__body">
+                <div class="app__title">Device Services</div>
+                <div class="app__sub">Hardware, repairs, replacements</div>
+              </div>
+              <i class="fas fa-chevron-right app__chev" aria-hidden="true"></i>
+            </a>
+
+            <a class="app" href="#">
+              <div class="app__icon"><i class="fas fa-user-friends"></i></div>
+              <div class="app__body">
+                <div class="app__title">HR Requests</div>
+                <div class="app__sub">Letters, benefits, onboarding</div>
+              </div>
+              <i class="fas fa-chevron-right app__chev" aria-hidden="true"></i>
+            </a>
+
+            <a class="app" href="#">
+              <div class="app__icon"><i class="fas fa-receipt"></i></div>
+              <div class="app__body">
+                <div class="app__title">Expense Support</div>
+                <div class="app__sub">Reimbursements & card issues</div>
+              </div>
+              <i class="fas fa-chevron-right app__chev" aria-hidden="true"></i>
+            </a>
+          </div>
+        </section>
+
+        <!-- Announcements -->
         <section class="card">
           <h3>Announcements</h3>
           <ul class="list">
             <li>
               <span class="badge">Info</span>
               VPN client update available (recommended)
+              <span class="list__meta">· Released today</span>
             </li>
             <li>
-              <span class="badge badge--warn">Notice</span>
-              MFA enrollment required for new devices
+              <span class="badge">Info</span>
+              New self-service access requests for shared drives
+              <span class="list__meta">· Available now</span>
             </li>
           </ul>
         </section>
@@ -179,6 +354,7 @@
           <span>© 2026 Acme Corporation</span>
           <a href="#" class="footer-link">Privacy</a>
           <a href="#" class="footer-link">Terms</a>
+          <a href="#" class="footer-link">Status</a>
         </footer>
       </main>
     </div>
@@ -191,6 +367,10 @@
         </li>
         <li>
           <i class="fas fa-user-alt"></i>
+          <a href="#requests">My requests</a>
+        </li>
+        <li>
+          <i class="fas fa-book"></i>
           <a href="#knowledge">Knowledge</a>
         </li>
         <li>
