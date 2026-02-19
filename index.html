@@ -111,9 +111,9 @@
                 Contact support
               </button>
 
-              <a class="btn btn-ghost" href="#requests">
-                <i class="fas fa-layer-group"></i>
-                View my requests
+              <a class="btn btn-ghost" href="#announcements">
+                <i class="fas fa-bullhorn"></i>
+                Announcements
               </a>
             </div>
 
@@ -211,130 +211,37 @@
           </article>
         </section>
 
-        <!-- Two-column section -->
-        <section class="split" id="requests">
-          <article class="card">
-            <h3>My requests</h3>
-            <div class="table">
-              <div class="row row--head">
-                <div>ID</div>
-                <div>Title</div>
-                <div>Status</div>
-                <div>Updated</div>
-              </div>
-
-              <div class="row">
-                <div class="mono">REQ-1048</div>
-                <div>Access to Finance folder</div>
-                <div><span class="status status--inprogress">In progress</span></div>
-                <div>2h ago</div>
-              </div>
-
-              <div class="row">
-                <div class="mono">REQ-1042</div>
-                <div>Laptop docking station</div>
-                <div><span class="status status--waiting">Waiting on you</span></div>
-                <div>Yesterday</div>
-              </div>
-
-              <div class="row">
-                <div class="mono">REQ-1039</div>
-                <div>VPN connectivity issue</div>
-                <div><span class="status status--open">Open</span></div>
-                <div>3 days ago</div>
-              </div>
-            </div>
-
-            <div class="card__actions">
-              <a class="btn btn-secondary" href="#">
-                <i class="fas fa-list"></i>
-                View all
-              </a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>Recommended for you</h3>
-            <ul class="list">
-              <li>
-                <span class="badge">How-to</span>
-                Reset your password (SSO)
-                <span class="list__meta">· 2 min read</span>
-              </li>
-              <li>
-                <span class="badge">Policy</span>
-                Remote work security guidelines
-                <span class="list__meta">· Updated this week</span>
-              </li>
-              <li>
-                <span class="badge badge--warn">Notice</span>
-                MFA enrollment required for new devices
-                <span class="list__meta">· Action needed</span>
-              </li>
-            </ul>
-
-            <div class="callout">
-              <div class="callout__title">Tip</div>
-              <div class="callout__text">
-                Use <span class="mono">Contact support</span> for quick questions — it routes you to the right team.
-              </div>
-            </div>
-          </article>
-        </section>
-
-        <!-- App catalog -->
+        <!-- Recommended section (kept) -->
         <section class="card">
-          <div class="section-head">
-            <h3>App catalog</h3>
-            <div class="section-head__right">
-              <button class="chip chip--active" type="button">All</button>
-              <button class="chip" type="button">IT</button>
-              <button class="chip" type="button">HR</button>
-              <button class="chip" type="button">Finance</button>
+          <h3>Recommended for you</h3>
+          <ul class="list">
+            <li>
+              <span class="badge">How-to</span>
+              Reset your password (SSO)
+              <span class="list__meta">· 2 min read</span>
+            </li>
+            <li>
+              <span class="badge">Policy</span>
+              Remote work security guidelines
+              <span class="list__meta">· Updated this week</span>
+            </li>
+            <li>
+              <span class="badge badge--warn">Notice</span>
+              MFA enrollment required for new devices
+              <span class="list__meta">· Action needed</span>
+            </li>
+          </ul>
+
+          <div class="callout">
+            <div class="callout__title">Tip</div>
+            <div class="callout__text">
+              Use <span class="mono">Contact support</span> for quick questions — it routes you to the right team.
             </div>
-          </div>
-
-          <div class="apps">
-            <a class="app" href="#">
-              <div class="app__icon"><i class="fas fa-lock"></i></div>
-              <div class="app__body">
-                <div class="app__title">Access Management</div>
-                <div class="app__sub">Request roles, groups, permissions</div>
-              </div>
-              <i class="fas fa-chevron-right app__chev" aria-hidden="true"></i>
-            </a>
-
-            <a class="app" href="#">
-              <div class="app__icon"><i class="fas fa-laptop"></i></div>
-              <div class="app__body">
-                <div class="app__title">Device Services</div>
-                <div class="app__sub">Hardware, repairs, replacements</div>
-              </div>
-              <i class="fas fa-chevron-right app__chev" aria-hidden="true"></i>
-            </a>
-
-            <a class="app" href="#">
-              <div class="app__icon"><i class="fas fa-user-friends"></i></div>
-              <div class="app__body">
-                <div class="app__title">HR Requests</div>
-                <div class="app__sub">Letters, benefits, onboarding</div>
-              </div>
-              <i class="fas fa-chevron-right app__chev" aria-hidden="true"></i>
-            </a>
-
-            <a class="app" href="#">
-              <div class="app__icon"><i class="fas fa-receipt"></i></div>
-              <div class="app__body">
-                <div class="app__title">Expense Support</div>
-                <div class="app__sub">Reimbursements & card issues</div>
-              </div>
-              <i class="fas fa-chevron-right app__chev" aria-hidden="true"></i>
-            </a>
           </div>
         </section>
 
         <!-- Announcements -->
-        <section class="card">
+        <section class="card" id="announcements">
           <h3>Announcements</h3>
           <ul class="list">
             <li>
@@ -366,12 +273,12 @@
           <a href="#">Home</a>
         </li>
         <li>
-          <i class="fas fa-user-alt"></i>
-          <a href="#requests">My requests</a>
-        </li>
-        <li>
           <i class="fas fa-book"></i>
           <a href="#knowledge">Knowledge</a>
+        </li>
+        <li>
+          <i class="fas fa-bullhorn"></i>
+          <a href="#announcements">Announcements</a>
         </li>
         <li>
           <i class="fas fa-envelope"></i>
