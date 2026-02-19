@@ -1,5 +1,5 @@
 :root {
-  --dwp-navigator-trigger-display: none;
+  --dwp-navigator-trigger-display: inline-block;
   --dwp-navigator-trigger-background: #f86e00;
   --dwp-navigator-trigger-border: #f1f1f4;
   --dwp-navigator-trigger-border-radius: 50% 50% 50% 3px;
