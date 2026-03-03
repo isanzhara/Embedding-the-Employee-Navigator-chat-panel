@@ -1,6 +1,6 @@
 :root {
   --dwp-navigator-trigger-display: inline-block;
-  --dwp-navigator-trigger-background: var(--primary-color);
+  --dwp-navigator-trigger-background: url('https://freesvg.org/img/1538298822.png');
   --dwp-navigator-trigger-border: #f1f1f4;
   --dwp-navigator-trigger-border-radius: 50% 50% 50% 3px;
   --dwp-navigator-trigger-color: white;
