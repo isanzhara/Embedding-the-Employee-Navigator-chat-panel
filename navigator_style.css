@@ -1,6 +1,6 @@
 :root {
   --dwp-navigator-trigger-display: inline-block;
-  --dwp-navigator-trigger-background: url('../assets/image.gif');
+  --dwp-navigator-trigger-background: #ec00f8;
   --dwp-navigator-trigger-border: #f1f1f4;
   --dwp-navigator-trigger-border-radius: 50% 50% 50% 3px;
   --dwp-navigator-trigger-color: white;
